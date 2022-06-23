@@ -1,0 +1,79 @@
+.wrapper {
+    height: 60px;
+    box-shadow: 0 1px 1px var(--shadow);
+    background-color: var(--bgtertiary);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    --search-border-radius: 92px;
+    --search-height: 46px;
+    --search-top-spacer: 9px;
+    --border-search: rgba(22, 24, 35, 0.2);
+    --search-button-width: 52px;
+}
+.inner {
+    height: 100%;
+    width: 1150px;
+    max-width: 100%;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.see-more-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-color: transparent;
+    font-size: 2rem;
+}
+
+.action-btn {
+    position: relative;
+    display: flex;
+    font-size: 2.2rem;
+    color: #161823;
+    background-color: transparent;
+    padding: 4px 12px;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: -3px;
+    right: 0px;
+    padding: 0px 6px;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white);
+    font-family: 'ProximaNova', sans-serif;
+    background-color: var(--primary);
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 12px;
+    margin-left: 14px;
+    cursor: pointer;
+}

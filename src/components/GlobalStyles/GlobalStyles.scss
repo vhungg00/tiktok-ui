@@ -1,22 +1,24 @@
-@import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600;700&display=swap');
-
-
 :root {
     // content_color
-    --content-primary: rgba(22, 24, 35, 1.0);
+    --content-primary: rgba(22, 24, 35, 1);
     --content-secondary: rgba(22, 24, 35, 0.75);
-
+    --content-tertiary: #ffffff;
+    --content-redd: rgba(254, 44, 85, 1);
     // background
-    --bgprimary: rgba(254, 44, 85, 1.0);
+    --bgprimary: rgba(254, 44, 85, 1);
     --bgSecondary: rgba(22, 24, 35, 0.06);
     --bgtertiary: #ffffff;
     // line_color
-    --line-primary: rgba(254, 44, 85, 1.0);
-    --line-secondary: rgba(22, 24, 35, 0.06);
+    --line-primary: rgba(254, 44, 85, 1);
+    --line-secondary: rgba(22, 24, 35, 0.12);
+    --line-tertiary: rgba(22, 24, 35, 0.06);
     // shadow
     --shadow: rgba(0 0 0 / 12%);
-
+    // search
+    // hover
+    --bgHover: rgba(22, 24, 35, 0.03);
+    // font-family
+    --font-family: 'ProximaNova', sans-serif;
 }
 
 * {
@@ -30,8 +32,96 @@ html {
 }
 
 body {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: var(--font-family);
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizespeed;
+    overflow-y: overlay;
+}
+
+// Scrollbar CSS
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+// Fonts emmbeded
+// @font-face {
+//     font-family: ProximaNova;
+//     src: url('/src/assets/fonts/Proxima-Nova-Regular.woff2');
+//     font-weight: 500;
+// }
+
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/ProximaNova-Semibold.woff2');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/Proxima-Nova-Bold.woff');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: SofiaPro;
+    src: url('/assets/fonts/sofiapro-bold.woff2');
+    font-weight: 700;
+}
+
+button,
+input,
+[tabindex],
+textarea {
+    border: none;
+    outline: none;
+}
+a {
+    color: var(--content-secondary);
+    text-decoration: none;
+}
+
+body {
+    .tippy-box {
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        background-color: rgba(84, 84, 84, 0.92);
+    }
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+    .tippy-content {
+        padding: 8px 9px;
+    }
+    .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
+        top: -8px;
+    }
 }
